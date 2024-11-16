@@ -1536,5 +1536,144 @@
         "volume_encumber_modifier": 0
       }
     ]
+  },
+  {
+    "id": "hsld_plate_carrier_frontplates",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "hsld plate pockets (front and back)" },
+    "description": "This minimalist 'High Speed Low Drag' ballistic plate carrier rig consists of two denim pockets with leather straps, made to cover the front and back of your upper torso.  While a great deal of reliability is lost without anything beyond the installed plates, a hit will still be stopped before it can hit your vitals.  Now with all the tools and opportunities this new world provides, maybe you can come up with a good use?  Can be adjusted to accomodate more worn items underneath.",
+    "weight": "770 g",
+    "volume": "1350 ml",
+    "price": "50 USD",
+    "price_postapoc": "5 USD",
+    "symbol": ",",
+    "material": [ "denim", "leather" ],
+    "color": "light_gray",
+    "warmth": 2,
+    "flags": [ "STURDY", "OUTER", "WATER_FRIENDLY" ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "ablative": true,
+        "volume_encumber_modifier": 0,
+        "max_contains_volume": "2000 ml",
+        "max_contains_weight": "5 kg",
+        "max_item_length": "33 cm",
+        "moves": 800,
+        "description": "Pocket for a large armor plate.",
+        "flag_restriction": [ "ABLATIVE_LARGE" ]
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "ablative": true,
+        "volume_encumber_modifier": 0,
+        "max_contains_volume": "2000 ml",
+        "max_contains_weight": "5 kg",
+        "max_item_length": "33 cm",
+        "moves": 800,
+        "description": "Pocket for a large armor plate.",
+        "flag_restriction": [ "ABLATIVE_LARGE" ]
+      }
+    ],
+    "armor": [
+      {
+        "material": [ { "type": "denim", "covered_by_mat": 100, "thickness": 1.0 } ],
+        "encumbrance": 2,
+        "coverage": 60,
+        "cover_vitals": 90,
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_upper" ]
+      }
+    ],
+    "use_action": {
+      "type": "transform",
+      "menu_text": "Adjust for wearing further outwards",
+      "msg": "You adjust the front-back hsld carrier more loosely.",
+      "target": "hsld_plate_carrier_frontplates_adjusted"
+    }
+  },
+  {
+    "id": "hsld_plate_carrier_sideplates",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "hsld plate pockets (sides)" },
+    "description": "Not seen in the wild, this minimalist 'High Speed Low Drag' ballistic plate carrier rig is made to cover your sides.  Using pockets made of denim bound together by leather straps, it can be worn to protect your lower torso, as long as you can find suitable plates to fill it with.  Unlike proper bulletproof vests, this one was crafted without any other armor solution built in, so you don't feel very confident with it as the only thing between you and a bullet.  Can be adjusted to accomodate more worn items underneath.",
+    "weight": "310 g",
+    "volume": "500 ml",
+    "price": "50 USD",
+    "price_postapoc": "5 USD",
+    "symbol": ",",
+    "material": [ "denim", "leather" ],
+    "color": "light_gray",
+    "warmth": 2,
+    "flags": [ "STURDY", "OUTER", "WATER_FRIENDLY" ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "ablative": true,
+        "volume_encumber_modifier": 0,
+        "max_contains_volume": "800 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "21 cm",
+        "moves": 800,
+        "description": "Pocket for a medium armor plate.",
+        "flag_restriction": [ "ABLATIVE_MEDIUM" ]
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "ablative": true,
+        "volume_encumber_modifier": 0,
+        "max_contains_volume": "800 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "21 cm",
+        "moves": 800,
+        "description": "Pocket for a medium armor plate.",
+        "flag_restriction": [ "ABLATIVE_MEDIUM" ]
+      }
+    ],
+    "armor": [
+      {
+        "material": [ { "type": "denim", "covered_by_mat": 100, "thickness": 1.0 } ],
+        "encumbrance": 1,
+        "coverage": 30,
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_lower" ]
+      }
+    ],
+    "use_action": {
+      "type": "transform",
+      "menu_text": "Adjust for wearing further outwards",
+      "msg": "You adjust the side hsld carrier more loosely.",
+      "target": "hsld_plate_carrier_sideplates_adjusted"
+    }
+  },
+  {
+    "id": "hsld_plate_carrier_frontplates_adjusted",
+    "type": "ARMOR",
+    "copy-from": "hsld_plate_carrier_frontplates",
+    "name": { "str": "hsld plate pockets (front and back, strapped)" },
+    "description": "This minimalist 'High Speed Low Drag' ballistic plate carrier rig consists of two denim pockets with leather straps, made to cover the front and back of your upper torso.  While a great deal of reliability is lost without anything beyond the installed plates, a hit will still be stopped before it can hit your vitals.  Now with all the tools and opportunities this new world provides, maybe you can come up with a good use?  Currently adjusted to be worn as the outermost item, use to revert.",
+    "flags": [ "STURDY", "BELTED", "WATER_FRIENDLY" ],
+    "use_action": {
+      "type": "transform",
+      "menu_text": "Adjust for wearing further inwards",
+      "msg": "You adjust the front-back hsld carrier more tightly.",
+      "target": "hsld_plate_carrier_frontplates"
+    }
+  },
+  {
+    "id": "hsld_plate_carrier_sideplates_adjusted",
+    "type": "ARMOR",
+    "copy-from": "hsld_plate_carrier_sideplates",
+    "name": { "str": "hsld plate pockets (sides, strapped)" },
+    "description": "Not seen in the wild, this minimalist 'High Speed Low Drag' ballistic plate carrier rig is made to cover your sides.  Using pockets made of denim bound together by leather straps, it can be worn to protect your lower torso, as long as you can find suitable plates to fill it with.  Unlike proper bulletproof vests, this one was crafted without any other armor solution built in, so you don't feel very confident with it as the only thing between you and a bullet.  Currently adjusted to be worn as the outermost item, use to revert.",
+    "flags": [ "STURDY", "BELTED", "WATER_FRIENDLY" ],
+    "use_action": {
+      "type": "transform",
+      "menu_text": "Adjust for wearing further inwards",
+      "msg": "You adjust the side hsld carrier more tightly.",
+      "target": "hsld_plate_carrier_sideplates"
+    }
   }
 ]
